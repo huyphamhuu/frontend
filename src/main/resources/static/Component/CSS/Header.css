@@ -1,0 +1,68 @@
+header
+{
+    height: 110px;
+    background-color: #FF6347;
+    position: fixed; /* posstion, width, top cần dùng chung cho việc cuộn không bị mất cộng với phần body cần padding top = height của header*/
+    width: 100%;
+    top: 0;
+}
+.authentication
+{
+    float: right;
+    display: inline-block;
+    font-size: 14px;
+    height:30px;
+    width: 70px;
+    text-align: center;
+    padding-top:5px;
+
+}
+.nav
+{
+    height: 50px;
+}
+.nav-link
+{
+    color: black;
+}
+.nav-link:hover
+{
+    color: white;
+
+}
+.nav-link:valid
+{
+    color: black;
+    text-decoration: underline;
+
+}
+.container-fluid
+{
+    height:30px;
+}
+.brand-name
+{
+    font-size: 25px;
+}
+.type
+{
+    font-size: 20px;
+}
+.search
+{
+    float: right;
+}
+.d-flex
+{
+    height: 25px;
+}
+.btn-outline-success
+{
+    padding: 0px;
+    width: 80px
+}
+img
+{
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,181 @@
+body
+{
+    background-color: #F5F5F5;
+}
+.main
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 110px;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+}
+.column-1
+{
+    width: 45%;
+}
+.screen
+{
+    width: 100%;
+    padding: 10px;
+}
+.photo-list
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.btn-photo-list
+{
+    width: 15%;
+    height: 80px;
+    border: cornflowerblue solid 1px;
+}
+.column-2
+{
+    width: 55%;
+    padding-top: 20px;
+}
+.name
+{
+    font-size: 25px;
+}
+.price
+{
+    font-size: 40px;
+    color: red;
+    height: 100px;
+    background-color: #F5F5F5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-top: 20px;
+}
+.color,.size,.quanity,.product-handling
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.color .column-1, .size .column-1, .quanity .column-1
+{
+    width: 20%;
+    height: 100%;
+    padding-top: 10px;
+
+}
+.color .column-2, .size .column-2, .quanity .column-2
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding-top: 10px;
+}
+.btn-color,.btn-size
+{
+    display: flex;
+    width: 120px;
+    height: 40px;
+    border: cornflowerblue solid 1px;
+    margin-right: 2.5%;
+}
+.btn-color:hover,.btn-size:hover
+{
+    border: red solid 1px;
+}
+.img-color
+{
+    height: 100%;
+    width: 40%;
+}
+img
+{
+    height: 100%;
+}
+.text-color
+{
+    height: 100%;
+    width: 60%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.text-size, .text-quanity
+{
+    height: 100%;
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+}
+.group-btn-quanity
+{
+    display: flex;
+    margin-right: 2.5%;
+}
+.btn-quanity
+{
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+}
+.input-quanity
+{
+    width: 60px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+    text-align: center;
+}
+.max-quanity
+{
+    padding-top: 10px;
+}
+.btn-product-handling
+{
+    margin-right: 3%;
+    height: 60px;
+    font-size: 20px;
+}
+.modal-content,.modal-dialog
+{
+    width: 300px;
+    height: 150px;
+    font-size: 15px;
+    text-align: center;
+}
+.modal-content
+{
+    padding-top: 45px;
+    color: green;
+}
+.space
+{
+    height: 20px;
+    width: 100%;
+    background-color: #F5F5F5;
+    margin-top: 50px;
+}
+.description
+{
+    width: 100%;
+    padding-left: 50px;
+}
+.title-description
+{
+    width: 100%;
+    font-size: 25px;
+    padding-top: 9px;
+    padding-left: 15px;
+    height: 50px;
+    margin: 20px;
+    background-color: #F5F5F5;
+    font-weight: bold;
+}

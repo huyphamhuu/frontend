@@ -1,0 +1,147 @@
+body
+{
+    background-color: #F5F5F5;
+}
+.main
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 110px;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+}
+.space
+{
+    height: 10px;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+.header-row, .item-row
+{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding-top: 15px;
+}
+.header-check, .item-check
+{
+    width: 5%;
+    text-align: center;
+    padding-top: 5px;
+
+}
+.header-check input, .item-check input
+{
+    width: 20px;
+    height: 20px;
+}
+.header-product, .item-product
+{
+    width: 35%;
+
+}
+.header-style, .item-style
+{
+    width: 15%;
+
+}
+.header-pirce_each_product, .item-pirce_each_product
+{
+    width: 10%;
+    text-align: center;
+}
+.header-quanity, .item-quanity
+{
+    width: 15%;
+    text-align: center;
+}
+.header-pirce_sum, .item-pirce_sum
+{
+    width: 10%;
+    text-align: center;
+}
+.header-operate, .item-operate
+{
+    width: 10%;
+    text-align: center;
+}
+.item-row
+{
+    height: 120px;
+    padding-bottom: 15px;
+}
+.item-check
+{
+    padding-top: 30px;
+}
+.item-product
+{
+    display: flex;
+}
+.picture
+{
+    width: 20%;
+}
+.name
+{
+    width: 80%;
+    font-size: 18px;
+}
+.name a
+{
+    color: black;
+    text-decoration: none;
+}
+.item-pirce_each_product, .item-pirce_sum
+{
+    padding-top: 30px;
+    color: red;
+    text-align: center;
+}
+.item-quanity
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group-btn-quanity
+{
+    display: flex;
+}
+.btn-quanity
+{
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+}
+.input-quanity
+{
+    width: 60px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+    text-align: center;
+}
+.text-quanity
+{
+    height: 100%;
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+}
+.item-operate
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-operate:hover
+{
+    color: red;
+}
