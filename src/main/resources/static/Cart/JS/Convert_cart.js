@@ -1,4 +1,4 @@
-function convert(current_btn)
+function convertCart(current_btn)
 {
   let arr_btn = current_btn.parentElement.children;
 

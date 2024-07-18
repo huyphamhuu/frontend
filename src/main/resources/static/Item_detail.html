@@ -18,29 +18,29 @@
             <img src="" alt="">
         </div>
         <div class="photo-list">
-            <buton class="btn-photo-list selected" onmouseover="handleHover(this)">
+            <button class="btn-photo-list selected" onmouseover="handleHover(this)">
                 <img src="img/Ao_so_mi.png" alt="">
-            </buton>
+            </button>
 
-            <buton class="btn-photo-list" onmouseover="handleHover(this)">
+            <button class="btn-photo-list" onmouseover="handleHover(this)">
                 <img src="img/Mau_1.png" alt="">
-            </buton>
+            </button>
 
-            <buton class="btn-photo-list" onmouseover="handleHover(this)">
+            <button class="btn-photo-list" onmouseover="handleHover(this)">
                 <img src="img/Mau_2.png" alt="">
-            </buton>
+            </button>
 
-            <buton class="btn-photo-list" onmouseover="handleHover(this)">
+            <button class="btn-photo-list" onmouseover="handleHover(this)">
                 <img src="img/Mau_3.png" alt="">
-            </buton>
+            </button>
 
-            <buton class="btn-photo-list" onmouseover="handleHover(this)">
+            <button class="btn-photo-list" onmouseover="handleHover(this)">
                 <img src="img/Mau_4.png" alt="">
-            </buton>
+            </button>
 
-            <buton class="btn-photo-list" onmouseover="handleHover(this)">
+            <button class="btn-photo-list" onmouseover="handleHover(this)">
                 <img src="img/Kich_thuoc.png" alt="">
-            </buton>
+            </button>
 
         </div>
     </div>
@@ -61,14 +61,14 @@
                     Màu sắc:
                 </div>
                 <div class="column-2">
-                    <buton class="btn-color" onclick="handleClick(this)" onmouseover="handleHover(this)">
+                    <button class="btn-color" onclick="handleClick(this)" onmouseover="handleHover(this)">
                         <div class="img-color">
                             <img class="img-img-color" src="img/Ao_so_mi.png" alt="">
                         </div>
                         <div class="text-color">
                             Đen
                         </div>
-                    </buton>
+                    </button>
                 </div>
             </div>
 
@@ -77,29 +77,29 @@
                     Kích thước:
                 </div>
                 <div class="column-2">
-                    <buton class="btn-size" onclick="handleClick(this)">
-                        <div class="text-size"> <!--Đặt thẻ div do buton không dùng text-align được -->
+                    <button class="btn-size" onclick="handleClick(this)">
+                        <div class="text-size"> <!--Đặt thẻ div do button không dùng text-align được -->
                             L
                         </div>
-                    </buton>
+                    </button>
 
-                    <buton class="btn-size" onclick="handleClick(this)">
+                    <button class="btn-size" onclick="handleClick(this)">
                         <div class="text-size">
                             XL
                         </div>
-                    </buton>
+                    </button>
 
-                    <buton class="btn-size" onclick="handleClick(this)">
+                    <button class="btn-size" onclick="handleClick(this)">
                         <div class="text-size">
                             XXL
                         </div>
-                    </buton>
+                    </button>
 
-                    <buton class="btn-size" onclick="handleClick(this)">
+                    <button class="btn-size" onclick="handleClick(this)">
                         <div class="text-size">
                             XXXL
                         </div>
-                    </buton>
+                    </button>
                 </div>
             </div>
 
@@ -109,19 +109,19 @@
                 </div>
                 <div class="column-2">
                     <div class="group-btn-quanity">
-                        <buton class="btn-quanity" onclick="handleMinusQuanity(this)">
+                        <button class="btn-quanity" onclick="handleMinusQuanity(this)">
                             <div class="text-quanity">
                                 -
                             </div>
-                        </buton>
+                        </button>
 
                         <input class="input-quanity" type="text" value="0">
 
-                        <buton class="btn-quanity" onclick="handlePlusQuanity(this)">
+                        <button class="btn-quanity" onclick="handlePlusQuanity(this)">
                             <div class="text-quanity">
                                 +
                             </div>
-                        </buton>
+                        </button>
                     </div>
 
                     <div class="max-quanity">
@@ -259,9 +259,9 @@
     let src = firstBtnPhotoList.firstElementChild.getAttribute('src')
     document.getElementsByClassName('screen')[0].firstElementChild.setAttribute('src', src);
 </script>
-<script src="Item_detail/JS/Click.js"></script>
+<script src="Item_detail/JS/Click_item_detail.js"></script>
 <script src="Item_detail/JS/Hover.js"></script>
-<script src="Item_detail/JS/Convert.js"></script>
+<script src="Item_detail/JS/Convert_item_detail.js"></script>
 <script src="Item_detail/JS/Out.js"></script>
 <script>
     document.getElementsByClassName('price')[0].showModal()

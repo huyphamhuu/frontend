@@ -3,7 +3,7 @@ function handleHover(current_btn)
   let src
   if(current_btn.classList[0] == 'btn-photo-list')
   {
-    convert(current_btn);
+    convertItemDetail(current_btn);
     current_btn.style.border = 'red solid 2px';
     current_btn.classList.add('selected');
     src = current_btn.firstElementChild.getAttribute('src')

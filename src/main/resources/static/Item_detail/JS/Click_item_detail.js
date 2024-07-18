@@ -1,6 +1,6 @@
 function handleClick(current_btn)
 {
-  convert(current_btn);
+  convertItemDetail(current_btn);
   current_btn.style.border = 'red solid 2px';
   current_btn.classList.add('selected');
 
@@ -41,9 +41,6 @@ function handlePlusQuanity(current_btn)
 
 function handleAddProductToCart()
 {
-  let modal = document.getElementById('exampleModal')
-  modal.setAttribute('aria-hidden', 'false')
-
 
 }
 

@@ -1,6 +1,7 @@
 body
 {
     background-color: #F5F5F5;
+    height: 2000px;
 }
 .main
 {
@@ -89,12 +90,95 @@ body
 {
     width: 80%;
     font-size: 18px;
+    padding-right: 5%;
 }
 .name a
 {
     color: black;
     text-decoration: none;
 }
+.btn-item-style
+{
+    background-color: white;
+    width: 100%;
+    text-align: start;
+    padding: 0;
+    border: 0;
+}
+.btn-item-style:active
+{
+    background-color: #CCFFFF;
+}
+.md
+{
+    position: absolute;
+    width: 300px;
+    border: #AAAAAA solid 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+.color-content-modal,.size-content-modal
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+.cl1-color-content-modal, .cl1-size-content-modal
+{
+    width: 30%;
+    height: 100%;
+    padding-top: 10px;
+
+}
+.cl2-color-content-modal, .cl2-size-content-modal
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding-top: 5px;
+}
+.btn-color,.btn-size
+{
+    display: flex;
+    width: 60px;
+    height: 30px;
+    border: #AAAAAA solid 1px;
+    margin-right: 2.5%;
+    background-color: transparent;
+}
+.btn-color:hover,.btn-size:hover
+{
+    border: red solid 1px;
+}
+.text-content-modal
+{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.footer-modal
+{
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+}
+.btn-back-footer-modal
+{
+    margin-right: 10px;
+}
+.test
+{
+    font-size: 30px;
+}
+
+
+
+
+
 .item-pirce_each_product, .item-pirce_sum
 {
     padding-top: 30px;
@@ -145,3 +229,33 @@ body
 {
     color: red;
 }
+.footer-row
+{
+    display: flex;
+    justify-content: end;
+    height: 80px;
+    width: 100%;
+}
+.text-footer-row
+{
+    padding-top: 25px;
+    font-size: 25px;
+}
+.price_sum_all_item
+{
+    padding-top: 25px;
+    font-size: 25px;
+    color: red;
+}
+.btn-product-handling
+{
+    width: 20%;
+    padding: 10px;
+}
+.btn-product-handling button
+{
+    width: 100%;
+    height: 100%;
+}
+
+

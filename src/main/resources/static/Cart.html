@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="Component/CSS/Header.css">
-    <link rel="stylesheet" href="Body_cart.css">
+    <link rel="stylesheet" href="Cart/CSS/Body_cart.css">
     <link rel="stylesheet" href="Component/CSS/Footer.css">
 </head>
 
@@ -17,7 +17,7 @@
 
     <div class="header-row">
         <div class="header-check">
-            <input type="checkbox" checked='false' onclick="handleHeaderCheckbox()">
+            <input type="checkbox" onclick="handleHeaderCheckbox()">
         </div>
         <div class="header-product">
             Sản phẩm
@@ -44,7 +44,7 @@
 
         <div class="item-row">
             <div class="item-check">
-                <input type="checkbox">
+                <input type="checkbox" onclick="handleItemCheckbox(this)">
             </div>
             <div class="item-product">
                 <div class="picture">
@@ -59,7 +59,18 @@
                 </div>
             </div>
             <div class="item-style">
-                Phân loại
+                <button type="button" class=" btn-item-style" onclick="handleDropdownBtnItemStyle(this)">
+                    <div class="dropdown-item-style">
+                        Phân loại hàng:&nbsp;&nbsp;
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="text-item-style">
+                        Đen, XL
+                    </div>
+                </button>
+
+
+
             </div>
             <div class="item-pirce_each_product">
                 118.000đ
@@ -72,7 +83,7 @@
                         </div>
                     </buton>
 
-                    <input class="input-quanity" type="text" value="0">
+                    <input class="input-quanity" type="text" value="0" oninput="handleInputQuanity(this.parentElement.parentElement.parentElement)">
 
                     <buton class="btn-quanity" onclick="handlePlusQuanity(this)">
                         <div class="text-quanity">
@@ -92,10 +103,83 @@
         </div>
     </div>
 
+    <div class="group-item-row 2">
+        <div class="space"></div>
+
+        <div class="item-row">
+            <div class="item-check">
+                <input type="checkbox" onclick="handleItemCheckbox(this)">
+            </div>
+            <div class="item-product">
+                <div class="picture">
+                    <a href="Item_detail.html">
+                        <img src="img/Ao_so_mi.png" alt="">
+                    </a>
+                </div>
+                <div class="name">
+                    <a href="Item_detail.html">
+                        Áo Sơ Mi Dài Tay Kẻ Sọc Nam Mùa Xuân Đa Năng Áo Khoác Nam Mỏng Thường Ngày Rời Áo Sơ Mi
+                    </a>
+                </div>
+            </div>
+            <div class="item-style">
+                <button type="button" class=" btn-item-style" onclick="handleDropdownBtnItemStyle(this)">
+                    <div class="dropdown-item-style">
+                        Phân loại hàng:&nbsp;&nbsp;
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+
+                    <div class="text-item-style">
+                        Đen, XL
+                    </div>
+                </button>
+            </div>
+            <div class="item-pirce_each_product">
+                118.000đ
+            </div>
+            <div class="item-quanity">
+                <div class="group-btn-quanity">
+                    <buton class="btn-quanity" onclick="handleMinusQuanity(this)">
+                        <div class="text-quanity">
+                            -
+                        </div>
+                    </buton>
+
+                    <input class="input-quanity" type="text" value="0" oninput="handleInputQuanity(this.parentElement.parentElement.parentElement)">
+
+                    <buton class="btn-quanity" onclick="handlePlusQuanity(this)">
+                        <div class="text-quanity">
+                            +
+                        </div>
+                    </buton>
+                </div>
+            </div>
+            <div class="item-pirce_sum">
+                0đ
+            </div>
+            <div class="item-operate">
+                <buton class="btn-operate" onclick="deleteGroupItemRow(this)">
+                    Xóa
+                </buton>
+            </div>
+        </div>
+    </div>
 
     <div class="space"></div>
 
+    <div class="footer-row">
+        <div class="text-footer-row">
+            Tổng thanh toán:&nbsp;&nbsp;
+        </div>
+        <div class="price_sum_all_item">
+           0đ
+       </div>
+        <div class="btn-product-handling">
+            <button type="button" class="btn btn-danger btn-product-handling">Mua sản phẩm</button>
+        </div>
+    </div>
 
+    <div class="space"></div>
 </div>
 
 <header>
@@ -146,9 +230,9 @@
     © 2015 - Bản quyền thuộc về Công ty TNHH CLOTHES
 </footer>
 
-
-<script src="Click.js"></script>
-<script src="Caculate.js"></script>
-
+<script src="Cart/JS/Click_cart.js"></script>
+<script src="Cart/JS/Caculate.js"></script>
+<script src="Cart/JS/Convert_cart.js"></script>
+<script src="Cart/JS/Input.js"></script>
 </body>
 </html>
