@@ -1,4 +1,4 @@
-package DATH_CNPM.WEB.controller.fe;
+package DATH_CNPM.WEB.Controller.Fe;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -43,5 +43,39 @@ function handleAddProductToCart()
 {
 
 }
+function buyProduct()
+{
+  let price = parseFloat(document.getElementsByClassName("price")[0].innerHTML)*1000;
+  let quanity = parseFloat(document.getElementsByClassName("input-quanity")[0].value);
+  let priceSum = price*quanity;
 
+  const baseUrl = "http://localhost:8080/api/payment";
+  const params = {
+    amount: priceSum.toString(),
+  };
+
+  const queryString = new URLSearchParams(params).toString();
+  const urlWithParams = `${baseUrl}?${queryString}`;
+
+  fetch(urlWithParams, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(response => {
+      if (!response.ok) {
+        // Kiểm tra nếu phản hồi không thành công
+        throw new Error('Network response was not ok');
+      }
+      return response.json(); // Chuyển đổi phản hồi thành JSON
+    })
+    .then(data => {
+      // Lấy giá trị thuộc tính vnpayurl
+      const vnpayurl = data.url;
+      window.location.href = vnpayurl;
+    })
+    .catch(error => console.error('There was a problem with the fetch operation:', error));
+
+}
 

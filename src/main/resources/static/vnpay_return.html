@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>KẾT QUẢ THANH TOÁN</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/vnpay_jsp/assets/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="/vnpay_jsp/assets/jumbotron-narrow.css" rel="stylesheet">
+    <script src="/vnpay_jsp/assets/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <h3 class="text-muted">KẾT QUẢ THANH TOÁN</h3>
+    </div>
+    <div class="table-responsive">
+        <div class="form-group">
+            <label >Mã giao dịch thanh toán:</label>
+            <label id="txnRef"></label>
+        </div>
+        <div class="form-group">
+            <label >Số tiền:</label>
+            <label id="amount"></label>
+        </div>
+        <div class="form-group">
+            <label >Mô tả giao dịch:</label>
+            <label id="orderInfo"></label>
+        </div>
+        <div class="form-group">
+            <label >Mã lỗi thanh toán:</label>
+            <label id="responseCode"></label>
+        </div>
+        <div class="form-group">
+            <label >Mã giao dịch tại CTT VNPAY-QR:</label>
+            <label id="transactionNo"></label>
+        </div>
+        <div class="form-group">
+            <label >Mã ngân hàng thanh toán:</label>
+            <label id="bankCode"></label>
+        </div>
+        <div class="form-group">
+            <label >Thời gian thanh toán:</label>
+            <label id="payDate"></label>
+        </div>
+        <div class="form-group">
+            <label >Tình trạng giao dịch:</label>
+            <label id="transactionStatus"></label>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+    <footer class="footer">
+        <p>&copy; VNPAY 2020</p>
+    </footer>
+</div>
+
+<script>
+    // Example JavaScript to populate fields with data from query parameters
+    function getParameterByName(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    document.getElementById('txnRef').textContent = getParameterByName('vnp_TxnRef');
+    document.getElementById('amount').textContent = getParameterByName('vnp_Amount');
+    document.getElementById('orderInfo').textContent = getParameterByName('vnp_OrderInfo');
+    document.getElementById('responseCode').textContent = getParameterByName('vnp_ResponseCode');
+    document.getElementById('transactionNo').textContent = getParameterByName('vnp_TransactionNo');
+    document.getElementById('bankCode').textContent = getParameterByName('vnp_BankCode');
+    document.getElementById('payDate').textContent = getParameterByName('vnp_PayDate');
+    document.getElementById('transactionStatus').textContent =
+        (getParameterByName('vnp_TransactionStatus')== '00') ? 'Thành công' : 'Không thành công';
+</script>
+</body>
+</html>
