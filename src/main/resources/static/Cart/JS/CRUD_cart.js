@@ -63,7 +63,7 @@ fetch('/api/getCart')
                           </div>
                       </buton>
       
-                      <input class="input-quanity" type="text" value="${product.quanity}" oninput="handleInputQuantity(this.parentElement.parentElement.parentElement)">
+                      <input class="input-quanity" type="text" value="${product.quanity}" oninput="handleInputQuanity(this.parentElement.parentElement.parentElement)">
       
                       <buton class="btn-quanity" onclick="handlePlusQuanity(this)">
                           <div class="text-quanity">

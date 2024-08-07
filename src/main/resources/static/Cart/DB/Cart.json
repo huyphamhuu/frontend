@@ -1,11 +1,11 @@
 [ {
-  "id" : 3,
+  "id" : 2,
   "picture_av" : "img/Home/Ao_so_mi.png",
   "name" : "Áo Sơ Mi Dài Tay Kẻ Sọc Nam Mùa Xuân Đa Năng Áo Khoác Nam Mỏng Thường Ngày Rời Áo Sơ Mi",
   "color" : "Đen",
-  "size" : "XXL",
+  "size" : "XL",
   "price" : "118.000đ",
-  "quanity" : 7
+  "quanity" : 4
 }, {
   "id" : 4,
   "picture_av" : "img/Home/Ao_so_mi.png",
@@ -13,5 +13,5 @@
   "color" : "Đen",
   "size" : "XXXL",
   "price" : "118.000đ",
-  "quanity" : 3
+  "quanity" : 5
 } ]
