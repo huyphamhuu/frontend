@@ -148,6 +148,7 @@ img
 }
 .modal
 {
+    background-color: rgba(128, 128, 128, 20%);
 }
 .modal-content,.modal-dialog
 {

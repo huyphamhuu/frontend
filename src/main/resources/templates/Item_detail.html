@@ -19,27 +19,27 @@
         </div>
         <div class="photo-list">
             <button class="btn-photo-list selected" onmouseover="handleHover(this)">
-                <img src="img/Ao_so_mi.png" alt="">
+                <img src="img/Item_detail/1/Ao_so_mi.png" alt="">
             </button>
 
             <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Mau_1.png" alt="">
+                <img src="img/Item_detail/1/Mau_1.png" alt="">
             </button>
 
             <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Mau_2.png" alt="">
+                <img src="img/Item_detail/1/Mau_2.png" alt="">
             </button>
 
             <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Mau_3.png" alt="">
+                <img src="img/Item_detail/1/Mau_3.png" alt="">
             </button>
 
             <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Mau_4.png" alt="">
+                <img src="img/Item_detail/1/Mau_4.png" alt="">
             </button>
 
             <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Kich_thuoc.png" alt="">
+                <img src="img/Item_detail/1/Kich_thuoc.png" alt="">
             </button>
 
         </div>
@@ -63,7 +63,7 @@
                 <div class="column-2">
                     <button class="btn-color" onclick="handleClick(this)" onmouseover="handleHover(this)">
                         <div class="img-color">
-                            <img class="img-img-color" src="img/Ao_so_mi.png" alt="">
+                            <img class="img-img-color" src="img/Item_detail/1/Ao_so_mi.png" alt="">
                         </div>
                         <div class="text-color">
                             Đen
@@ -131,10 +131,10 @@
                 </div>
             </div>
             <div class="product-handling">
-                <button type="button" class="btn btn-outline-danger btn-product-handling" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="handleAddProductToCart()">Thêm vào giỏ hàng</button>
+                <button type="button" class="btn btn-outline-danger btn-product-handling" onclick="handleAddProductToCart(event)">Thêm vào giỏ hàng</button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-modal="true" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-body">
@@ -205,19 +205,19 @@
             <a class="nav-link brand-name" aria-current="page" href="/">CLOTHES</a>
         </li>
         <li class="nav-item type">
-            <a class="nav-link" href="#">Áo nam</a>
+            <a class="nav-link" href="/search?category=%C3%A1o&gender=Nam">Áo nam</a>
         </li>
         <li class="nav-item type">
-            <a class="nav-link" href="#">Quần nam</a>
+            <a class="nav-link" href="/search?category=qu%E1%BA%A7n&gender=Nam">Quần nam</a>
         </li>
         <li class="nav-item type">
-            <a class="nav-link" href="#">Áo nữ</a>
+            <a class="nav-link" href="/search?category=%C3%A1o&gender=N%E1%BB%AF">Áo nữ</a>
         </li>
         <li class="nav-item type">
-            <a class="nav-link" href="#">Quần nữ</a>
+            <a class="nav-link" href="/search?category=qu%E1%BA%A7n&gender=N%E1%BB%AF">Quần nữ</a>
         </li>
         <li class="nav-item type">
-            <a class="nav-link" href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="nav-link" href="/Cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </li>
     </ul>
     <div class="container-fluid">
@@ -261,10 +261,5 @@
 <script src="Item_detail/JS/Hover.js"></script>
 <script src="Item_detail/JS/Convert_item_detail.js"></script>
 <script src="Item_detail/JS/Out.js"></script>
-<script>
-    document.getElementsByClassName('price')[0].showModal()
-</script>
-
-<script src="Item_detail/JS/Get_DB_item_detail.js"></script>
 </body>
 </html>

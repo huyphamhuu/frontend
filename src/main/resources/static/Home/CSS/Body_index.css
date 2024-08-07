@@ -7,6 +7,12 @@
     padding-left: 2.5%;
     padding-right: 2.5%;
 }
+#cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
 .card
 {
     width: 150px;
@@ -14,6 +20,10 @@
     margin: 10px 15px;
     }
 .img
+{
+    height: 150px;
+}
+img
 {
     height: 150px;
 }

@@ -28,8 +28,18 @@ function handlePlusQuanity(current_btn)
 }
 function deleteGroupItemRow(current_btn)
 {
-  current_btn.parentElement.parentElement.parentElement.remove();
+  let group_item_row = current_btn.parentElement.parentElement.parentElement;
+  let uri = '/api/deleteProduct?id=' + group_item_row.getAttribute("id")
+  fetch(uri, {
+    method: 'POST', // Phương thức POST
+    headers: {
+      'Content-Type': 'application/json' // Loại nội dung là JSON
+    },
+  })
+
+  group_item_row.remove();
   caculateAllItemPriceSum()
+
 }
 function handleHeaderCheckbox()
 {
