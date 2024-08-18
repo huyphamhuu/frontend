@@ -9,14 +9,17 @@ function addCardToCards(product) {
 
   // Mẫu nội dung của thẻ card
   const cardHTML = `
-            <a class="card-link" href="Item_detail_${product.id}">
-                <div class="img">
-                    <img src="${product.picture_av}" class="card-img-top" alt="...">
-                </div>
-                <div class="card-body">
-                    <p class="card-text">${product.name}</p>
-                </div>
-            </a>
+                 <a href="Item_detail_${product.id}" style="background-color: #fff">
+                 <img src="${product.picture_av}"">
+                 <div class="card-info">
+                 <h4 class="card-title">${product.name}
+                 </h4>
+                 <p class="card-price">$129</p>
+                 <button class="card-btn" href="#">Buy Now</button>
+                  </div>
+                  </a>
+
+
     `;
 
   const newCard = document.createElement('div');

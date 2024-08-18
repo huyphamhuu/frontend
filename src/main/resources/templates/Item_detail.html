@@ -6,239 +6,488 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="Component/CSS/Header.css">
     <link rel="stylesheet" href="Item_detail/CSS/Body_item_detail.css">
-    <link rel="stylesheet" href="Component/CSS/Footer.css">
+    <link rel="stylesheet" href="Home/CSS/Body_index.css">
 </head>
 <body>
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="wrapper flexitem">
+                <div class="left">
+                    <a aria-current="page" href="/" class="logo">Bright Clothes</a>
+                </div>
+                <div class="middle">
+                    <nav class="navbar">
+                        <a href="/search?category=%C3%A1o&gender=Nam">Áo Nam</a>
+                        <a href="/search?category=qu%E1%BA%A7n&gender=Nam">Quần Nam</a>
+                        <a href="/search?category=%C3%A1o&gender=N%E1%BB%AF">Áo Nữ</a>
+                        <a href="/search?category=qu%E1%BA%A7n&gender=N%E1%BB%AF">Quần Nữ</a>
+                    </nav>
+                    <li class="nav-item type">
+                        <a class="nav-link" href="/Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <div class="icons">
+                        <a href="#" class="icon"><i class="ri-shopping-cart-line"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <nav class="navbar">
+                        <a href="#">Login</a>
+                        <a href="#">Logout</a>
+                    </nav>
 
-<div class="main">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-bar">
+        <div class="container" role="search">
+            <input type="search" placeholder="Find your product " aria-label="Search">
+            <button class="btn btn-outline-success" onclick="findProductByKeywords(this, event)">Search</button>
+        </div>
+    </div>
+</header>
+
+<div class="main main-detail">
     <div class="column-1">
         <div class="screen">
-            <img src="" alt="">
+            <img src="" alt="Product Image">
         </div>
         <div class="photo-list">
-            <button class="btn-photo-list selected" onmouseover="handleHover(this)">
-                <img src="img/Item_detail/1/Ao_so_mi.png" alt="">
-            </button>
-
-            <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Item_detail/1/Mau_1.png" alt="">
-            </button>
-
-            <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Item_detail/1/Mau_2.png" alt="">
-            </button>
-
-            <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Item_detail/1/Mau_3.png" alt="">
-            </button>
-
-            <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Item_detail/1/Mau_4.png" alt="">
-            </button>
-
-            <button class="btn-photo-list" onmouseover="handleHover(this)">
-                <img src="img/Item_detail/1/Kich_thuoc.png" alt="">
-            </button>
-
+            <!-- Danh sách các hình ảnh sẽ được tạo động ở đây -->
         </div>
     </div>
 
     <div class="column-2">
-        <div class="name">
-            Áo Sơ Mi Dài Tay Kẻ Sọc Nam Mùa Xuân Đa Năng Áo Khoác Nam Mỏng Thường Ngày Rời Áo Sơ Mi
-        </div>
-
-        <div class="price">
-            118.000đ
-        </div>
+        <div class="name"></div> <!-- Tên sản phẩm sẽ được chèn vào đây -->
+        <div class="price"></div> <!-- Giá sản phẩm sẽ được chèn vào đây -->
 
         <div class="style">
-
             <div class="color">
-                <div class="column-1">
-                    Màu sắc:
-                </div>
+                <div class="column-1">Màu sắc:</div>
                 <div class="column-2">
-                    <button class="btn-color" onclick="handleClick(this)" onmouseover="handleHover(this)">
-                        <div class="img-color">
-                            <img class="img-img-color" src="img/Item_detail/1/Ao_so_mi.png" alt="">
-                        </div>
-                        <div class="text-color">
-                            Đen
-                        </div>
-                    </button>
+                    <!-- Các lựa chọn màu sắc sẽ được chèn vào đây -->
                 </div>
             </div>
 
             <div class="size">
-                <div class="column-1">
-                    Kích thước:
-                </div>
+                <div class="column-1">Kích thước:</div>
                 <div class="column-2">
-                    <button class="btn-size" onclick="handleClick(this)">
-                        <div class="text-size"> <!--Đặt thẻ div do button không dùng text-align được -->
-                            L
-                        </div>
-                    </button>
-
-                    <button class="btn-size" onclick="handleClick(this)">
-                        <div class="text-size">
-                            XL
-                        </div>
-                    </button>
-
-                    <button class="btn-size" onclick="handleClick(this)">
-                        <div class="text-size">
-                            XXL
-                        </div>
-                    </button>
-
-                    <button class="btn-size" onclick="handleClick(this)">
-                        <div class="text-size">
-                            XXXL
-                        </div>
-                    </button>
+                    <!-- Các lựa chọn kích thước sẽ được chèn vào đây -->
                 </div>
             </div>
 
             <div class="quanity">
-                <div class="column-1">
-                    Số lượng:
-                </div>
+                <div class="column-1">Số lượng:</div>
                 <div class="column-2">
                     <div class="group-btn-quanity">
                         <button class="btn-quanity" onclick="handleMinusQuanity(this)">
-                            <div class="text-quanity">
-                                -
-                            </div>
+                            <div class="text-quanity">-</div>
                         </button>
-
                         <input class="input-quanity" type="text" value="0">
-
                         <button class="btn-quanity" onclick="handlePlusQuanity(this)">
-                            <div class="text-quanity">
-                                +
-                            </div>
+                            <div class="text-quanity">+</div>
                         </button>
                     </div>
-
-                    <div class="max-quanity">
-                        200 sản phẩm sẵn có
-                    </div>
-
+                    <div class="max-quanity"></div> <!-- Số lượng tối đa sẽ được chèn vào đây -->
                 </div>
             </div>
+
             <div class="product-handling">
                 <button type="button" class="btn btn-outline-danger btn-product-handling" onclick="handleAddProductToCart(event)">Thêm vào giỏ hàng</button>
-
-                <!-- Modal -->
-                <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-modal="true" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                Đã thêm sản phẩm thành công !
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <button type="button" class="btn btn-danger btn-product-handling" onclick="buyProduct()">Mua sản phẩm</button>
             </div>
+        </div>
+    </div>
 
-        </div>
-    </div>
     <div class="space"></div>
-    <div class="title-description">
-        MÔ TẢ
-    </div>
+    <div class="title-description">MÔ TẢ</div>
     <div class="description">
-        Ghi chú mua hàng
-        <br>
-        Độ dày: quy tắc
-        <br>
-        Chiều dài tay áo: Dài tay
-        <br>
-        Cổ áo: Ve áo
-        <br>
-        Thích hợp cho: Tiêu chuẩn
-        <br>
-        Mùa áp dụng: phổ quát trong suốt bốn mùa
-        <br>
-        Kịch bản áp dụng: Các hoạt động giải trí khác
-        <br>
-        Đối tượng mục tiêu: không giới hạn
-        <br>
-        Phong cách cơ bản: phổ biến
-        <br>
-        Phong cách phân đoạn: Hợp thời trang
-        <br>
-        Mô hình: Khác
-        <br>
-        Năm niêm yết: 2024
-        <br>
-        “” Vui lòng giữ độ lệch đo lường thủ công của dữ liệu nhỏ (± 2 cm).
-        <br>
-        <br>
-        <div class="picture">
-            <img src="https://down-vn.img.susercontent.com/file/cn-11134208-7r98o-ltdlgrb1ueota4" alt="">
-        </div>
-        1. Vui lòng chọn theo kích thước bạn thường mặc, nếu bạn không chắc chắn về kích thước xin vui lòng liên hệ với chúng tôi.
-        <br>
-        2. Xin vui lòng theo dõi cửa hàng của chúng tôi trước khi bạn mua hàng, Bạn sẽ nhận được một phiếu giảm giá!
-        <br>
-        3. chúng tôi chấp nhận tiền mặt khi giao hàng, xin vui lòng yên tâm để mua hàng.
+        <!-- Mô tả sản phẩm sẽ được chèn vào đây -->
     </div>
     <div class="space"></div>
 </div>
-
-<header>
-    <div>
-        <a class="nav-link authentication" href="#">Đăng kí</a>
-        <a class="nav-link authentication" href="#">Đăng nhập</a>
-        <div style="clear: both;"></div>
-
+<div class="container">
+    <h1>Danh sách sản phẩm</h1>
+    <div class="product-list row">
+        <!-- Sản phẩm sẽ được chèn vào đây -->
     </div>
-    <ul id="main" class="nav">
-        <li class="nav-item">
-            <a class="nav-link brand-name" aria-current="page" href="/">CLOTHES</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/search?category=%C3%A1o&gender=Nam">Áo nam</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/search?category=qu%E1%BA%A7n&gender=Nam">Quần nam</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/search?category=%C3%A1o&gender=N%E1%BB%AF">Áo nữ</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/search?category=qu%E1%BA%A7n&gender=N%E1%BB%AF">Quần nữ</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/Cart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-    </ul>
-    <div class="container-fluid">
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Tìm kiếm</button>
-        </form>
-    </div>
-    <div style="clear: both; height: 0"></div>
-</header>
+</div>
+
+<script>
+    // Giả sử dữ liệu JSON từ backend được nhận như thế này:
+    const itemData = {
+      "name": "Áo Sơ Mi Dài Tay Kẻ Sọc Nam Mùa Xuân Đa Năng Áo Khoác Nam Mỏng Thường Ngày Rời Áo Sơ Mi",
+      "price": "118.000đ",
+      "colors": [
+        {
+          "name": "Đen",
+          "image": "img/Item_detail/1/Ao_so_mi.png"
+        }
+      ],
+      "sizes": ["L", "XL", "XXL", "XXXL"],
+      "available_quantity": 200,
+      "images": [
+        "img/Item_detail/1/Ao_so_mi.png",
+        "img/Item_detail/1/Mau_1.png",
+        "img/Item_detail/1/Mau_2.png",
+        "img/Item_detail/1/Mau_3.png",
+        "img/Item_detail/1/Mau_4.png",
+        "img/Item_detail/1/Kich_thuoc.png"
+      ],
+      "description": [
+        "Độ dày: quy tắc",
+        "Chiều dài tay áo: Dài tay",
+        "Cổ áo: Ve áo",
+        "Thích hợp cho: Tiêu chuẩn",
+        "Mùa áp dụng: phổ quát trong suốt bốn mùa",
+        "Kịch bản áp dụng: Các hoạt động giải trí khác",
+        "Đối tượng mục tiêu: không giới hạn",
+        "Phong cách cơ bản: phổ biến",
+        "Phong cách phân đoạn: Hợp thời trang",
+        "Mô hình: Khác",
+        "Năm niêm yết: 2024",
+        "Vui lòng giữ độ lệch đo lường thủ công của dữ liệu nhỏ (± 2 cm)."
+      ]
+    };
+
+    function createItemDetail(itemData) {
+        console.log(itemData.name);
+      // Thêm tên sản phẩm
+      document.querySelector('.name').innerText = itemData.name;
+
+      // Thêm giá sản phẩm
+      document.querySelector('.price').innerText = itemData.price;
+
+      // Thêm các hình ảnh vào danh sách ảnh
+      const photoListElement = document.querySelector('.photo-list');
+      photoListElement.innerHTML = ''; // Xóa các ảnh mẫu
+
+      itemData.images.forEach((imageSrc, index) => {
+        const button = document.createElement('button');
+        button.className = 'btn-photo-list';
+        if (index === 0) button.classList.add('selected');
+        button.onmouseover = () => handleHover(button);
+
+        const img = document.createElement('img');
+        img.src = imageSrc;
+        button.appendChild(img);
+
+        photoListElement.appendChild(button);
+      });
+
+      // Cập nhật màn hình chính với ảnh đầu tiên
+      document.querySelector('.screen img').src = itemData.images[0];
+
+      // Thêm các màu sắc
+      const colorElement = document.querySelector('.color .column-2');
+      colorElement.innerHTML = ''; // Xóa các màu mẫu
+
+      itemData.colors.forEach(color => {
+        const button = document.createElement('button');
+        button.className = 'btn-color';
+        button.onclick = () => handleClick(button);
+        button.onmouseover = () => handleHover(button);
+
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'img-color';
+
+        const img = document.createElement('img');
+        img.className = 'img-img-color';
+        img.src = color.image;
+        imgDiv.appendChild(img);
+
+        const textDiv = document.createElement('div');
+        textDiv.className = 'text-color';
+        textDiv.innerText = color.name;
+
+        button.appendChild(imgDiv);
+        button.appendChild(textDiv);
+
+        colorElement.appendChild(button);
+      });
+
+      // Thêm các kích thước
+      const sizeElement = document.querySelector('.size .column-2');
+      sizeElement.innerHTML = ''; // Xóa các kích thước mẫu
+
+      itemData.sizes.forEach(size => {
+        const button = document.createElement('button');
+        button.className = 'btn-size';
+        button.onclick = () => handleClick(button);
+
+        const textDiv = document.createElement('div');
+        textDiv.className = 'text-size';
+        textDiv.innerText = size;
+
+        button.appendChild(textDiv);
+        sizeElement.appendChild(button);
+      });
+
+      // Cập nhật số lượng sẵn có
+      document.querySelector('.max-quanity').innerText = `${itemData.available_quantity} sản phẩm sẵn có`;
+
+      // Thêm mô tả sản phẩm
+      const descriptionElement = document.querySelector('.description');
+      descriptionElement.innerHTML = ''; // Xóa nội dung mẫu
+
+      itemData.description.forEach(line => {
+        const p = document.createElement('p');
+        p.innerText = line;
+        descriptionElement.appendChild(p);
+      });
+    }
+
+    // Gọi hàm khi tải trang
+    createItemDetail(itemData);
+</script>
+<script>
+    // Định nghĩa hàm async để gọi API
+    async function fetchAllProducts() {
+        try {
+            const response = await fetch('http://localhost:8083/products');
+            const products = await response.json();
+            displayProducts(products);
+        } catch (error) {
+            console.error('Error fetching products:', error);
+        }
+    }
+
+    // Hàm để hiển thị sản phẩm
+    function displayProducts(products) {
+        const productContainer = document.querySelector('.product-list');
+
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'col-md-4 mb-4'; // Bootstrap classes for styling
+
+            productCard.innerHTML = `
+                <div class="card h-100">
+                    <img src="${product.imageUrl[0]}" class="card-img-top" alt="${product.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.name}</h5>
+                        <p class="card-text">${product.price.toLocaleString('vi-VN')} đ</p>
+                        <p class="card-text">${product.description}</p>
+                    </div>
+                </div>
+            `;
+
+            productContainer.appendChild(productCard);
+        });
+    }
+
+    // Gọi hàm khi trang tải xong
+    document.addEventListener('DOMContentLoaded', function () {
+        fetchAllProducts();
+    });
+</script>
+<!--<div class="main">-->
+
+<!--    <div class="column-1">-->
+<!--        <div class="screen">-->
+<!--            <img src="" alt="">-->
+<!--        </div>-->
+<!--        <div class="photo-list">-->
+<!--            <button class="btn-photo-list selected" onmouseover="handleHover(this)">-->
+<!--                <img src="img/Item_detail/1/Ao_so_mi.png" alt="">-->
+<!--            </button>-->
+
+<!--            <button class="btn-photo-list" onmouseover="handleHover(this)">-->
+<!--                <img src="img/Item_detail/1/Mau_1.png" alt="">-->
+<!--            </button>-->
+
+<!--            <button class="btn-photo-list" onmouseover="handleHover(this)">-->
+<!--                <img src="img/Item_detail/1/Mau_2.png" alt="">-->
+<!--            </button>-->
+
+<!--            <button class="btn-photo-list" onmouseover="handleHover(this)">-->
+<!--                <img src="img/Item_detail/1/Mau_3.png" alt="">-->
+<!--            </button>-->
+
+<!--            <button class="btn-photo-list" onmouseover="handleHover(this)">-->
+<!--                <img src="img/Item_detail/1/Mau_4.png" alt="">-->
+<!--            </button>-->
+
+<!--            <button class="btn-photo-list" onmouseover="handleHover(this)">-->
+<!--                <img src="img/Item_detail/1/Kich_thuoc.png" alt="">-->
+<!--            </button>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="column-2">-->
+<!--        <div class="name">-->
+<!--            Áo Sơ Mi Dài Tay Kẻ Sọc Nam Mùa Xuân Đa Năng Áo Khoác Nam Mỏng Thường Ngày Rời Áo Sơ Mi-->
+<!--        </div>-->
+
+<!--        <div class="price">-->
+<!--            118.000đ-->
+<!--        </div>-->
+
+<!--        <div class="style">-->
+
+<!--            <div class="color">-->
+<!--                <div class="column-1">-->
+<!--                    Màu sắc:-->
+<!--                </div>-->
+<!--                <div class="column-2">-->
+<!--                    <button class="btn-color" onclick="handleClick(this)" onmouseover="handleHover(this)">-->
+<!--                        <div class="img-color">-->
+<!--                            <img class="img-img-color" src="img/Item_detail/1/Ao_so_mi.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="text-color">-->
+<!--                            Đen-->
+<!--                        </div>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="size">-->
+<!--                <div class="column-1">-->
+<!--                    Kích thước:-->
+<!--                </div>-->
+<!--                <div class="column-2">-->
+<!--                    <button class="btn-size" onclick="handleClick(this)">-->
+<!--                        <div class="text-size"> &lt;!&ndash;Đặt thẻ div do button không dùng text-align được &ndash;&gt;-->
+<!--                            L-->
+<!--                        </div>-->
+<!--                    </button>-->
+
+<!--                    <button class="btn-size" onclick="handleClick(this)">-->
+<!--                        <div class="text-size">-->
+<!--                            XL-->
+<!--                        </div>-->
+<!--                    </button>-->
+
+<!--                    <button class="btn-size" onclick="handleClick(this)">-->
+<!--                        <div class="text-size">-->
+<!--                            XXL-->
+<!--                        </div>-->
+<!--                    </button>-->
+
+<!--                    <button class="btn-size" onclick="handleClick(this)">-->
+<!--                        <div class="text-size">-->
+<!--                            XXXL-->
+<!--                        </div>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="quanity">-->
+<!--                <div class="column-1">-->
+<!--                    Số lượng:-->
+<!--                </div>-->
+<!--                <div class="column-2">-->
+<!--                    <div class="group-btn-quanity">-->
+<!--                        <button class="btn-quanity" onclick="handleMinusQuanity(this)">-->
+<!--                            <div class="text-quanity">-->
+<!--                                - -->
+<!--                            </div>-->
+<!--                        </button>-->
+
+<!--                        <input class="input-quanity" type="text" value="0">-->
+
+<!--                        <button class="btn-quanity" onclick="handlePlusQuanity(this)">-->
+<!--                            <div class="text-quanity">-->
+<!--                                +-->
+<!--                            </div>-->
+<!--                        </button>-->
+<!--                    </div>-->
+
+<!--                    <div class="max-quanity">-->
+<!--                        200 sản phẩm sẵn có-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="product-handling">-->
+<!--                <button type="button" class="btn btn-outline-danger btn-product-handling" onclick="handleAddProductToCart(event)">Thêm vào giỏ hàng</button>-->
+
+<!--                &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-modal="true" role="dialog">-->
+<!--                    <div class="modal-dialog">-->
+<!--                        <div class="modal-content">-->
+<!--                            <div class="modal-body">-->
+<!--                                Đã thêm sản phẩm thành công !-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <button type="button" class="btn btn-danger btn-product-handling" onclick="buyProduct()">Mua sản phẩm</button>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="space"></div>-->
+<!--    <div class="title-description">-->
+<!--        MÔ TẢ-->
+<!--    </div>-->
+<!--    <div class="description">-->
+<!--        Ghi chú mua hàng-->
+<!--        <br>-->
+<!--        Độ dày: quy tắc-->
+<!--        <br>-->
+<!--        Chiều dài tay áo: Dài tay-->
+<!--        <br>-->
+<!--        Cổ áo: Ve áo-->
+<!--        <br>-->
+<!--        Thích hợp cho: Tiêu chuẩn-->
+<!--        <br>-->
+<!--        Mùa áp dụng: phổ quát trong suốt bốn mùa-->
+<!--        <br>-->
+<!--        Kịch bản áp dụng: Các hoạt động giải trí khác-->
+<!--        <br>-->
+<!--        Đối tượng mục tiêu: không giới hạn-->
+<!--        <br>-->
+<!--        Phong cách cơ bản: phổ biến-->
+<!--        <br>-->
+<!--        Phong cách phân đoạn: Hợp thời trang-->
+<!--        <br>-->
+<!--        Mô hình: Khác-->
+<!--        <br>-->
+<!--        Năm niêm yết: 2024-->
+<!--        <br>-->
+<!--        “” Vui lòng giữ độ lệch đo lường thủ công của dữ liệu nhỏ (± 2 cm).-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <div class="picture">-->
+<!--            <img src="https://down-vn.img.susercontent.com/file/cn-11134208-7r98o-ltdlgrb1ueota4" alt="">-->
+<!--        </div>-->
+<!--        1. Vui lòng chọn theo kích thước bạn thường mặc, nếu bạn không chắc chắn về kích thước xin vui lòng liên hệ với chúng tôi.-->
+<!--        <br>-->
+<!--        2. Xin vui lòng theo dõi cửa hàng của chúng tôi trước khi bạn mua hàng, Bạn sẽ nhận được một phiếu giảm giá!-->
+<!--        <br>-->
+<!--        3. chúng tôi chấp nhận tiền mặt khi giao hàng, xin vui lòng yên tâm để mua hàng.-->
+<!--    </div>-->
+<!--    <div class="space"></div>-->
+<!--</div>-->
+
 
 <footer>
-    Công ty TNHH CLOTHES
-    <br>
-    Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.clothes.vn
-    <br>
-    Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Bùi Anh Tuấn
-    <br>
-    Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
-    <br>
-    © 2015 - Bản quyền thuộc về Công ty TNHH CLOTHES
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Company Information</h3>
+            <p>CLOTHES Co., Ltd</p>
+            <p>Address: Floors 4-5-6, Capital Place Building, No. 29 Lieu Giai Street, Ngoc Khanh Ward, Ba Dinh District, Hanoi, Vietnam.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+            <p>Hotline: 19001221</p>
+            <p>Email: cskh@hotro.clothes.vn</p>
+        </div>
+        <div class="footer-column">
+            <h3>Content Manager</h3>
+            <p>Responsible for Content Management: Nguyen Bui Anh Tuan</p>
+        </div>
+        <div class="footer-column">
+            <h3>Business Information</h3>
+            <p>Business Registration Number: 0106773786</p>
+            <p>Issued by Hanoi Department of Planning & Investment on 10/02/2015</p>
+            <p>© 2015 - Copyright belongs to CLOTHES Co., Ltd</p>
+        </div>
+    </div>
 </footer>
 
 <script>

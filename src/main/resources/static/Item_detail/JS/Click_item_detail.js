@@ -39,72 +39,13 @@ function handlePlusQuanity(current_btn)
 
 }
 
-function handleAddProductToCart(event)
-{
-  let color;
-  let size;
-  let quanity = document.getElementsByClassName("input-quanity")[0].value;
-  let id;
-
-  let arr_btn_color = document.getElementsByClassName("btn-color")
-  for (let i = 0; i < arr_btn_color.length; i++) {
-    if(arr_btn_color[i].classList[1] == 'selected')
-    {
-      color = arr_btn_color[i].firstElementChild.nextElementSibling.innerHTML.trim();
-      break;
-    }
-  }
-  let arr_btn_size = document.getElementsByClassName("btn-size")
-  for (let i = 0; i < arr_btn_size.length; i++) {
-    if(arr_btn_size[i].classList[1] == 'selected')
-    {
-      size = arr_btn_size[i].firstElementChild.innerText.trim();
-      break;
-    }
-  }
-
-  if(color&&size&&quanity>0)
-  {
-    if(size=="L")
-      id =1;
-    else if(size=="XL")
-      id =2;
-    else if(size=="XXL")
-      id =3;
-    else if(size=="XXXL")
-      id =4;
-
-    const product = {
-      id: id,
-      picture_av: "img/Home/Ao_so_mi.png",
-      name: "Áo Sơ Mi Dài Tay Kẻ Sọc Nam Mùa Xuân Đa Năng Áo Khoác Nam Mỏng Thường Ngày Rời Áo Sơ Mi",
-      color: color,
-      size: size,
-      price: "118.000đ",
-      quanity: quanity.toString()
-    };
-
-    fetch('/api/addProductToCart', {
-      method: 'POST', // Phương thức POST
-      headers: {
-        'Content-Type': 'application/json' // Loại nội dung là JSON
-      },
-      body: JSON.stringify(product) // Chuyển đối tượng JavaScript thành chuỗi JSON
-    })
-
-    event.preventDefault()
-    const modalElement = document.getElementById('exampleModal');
-    const modal = new bootstrap.Modal(modalElement);
-    modal.show();
-  }
-}
 function buyProduct()
 {
   let price = parseFloat(document.getElementsByClassName("price")[0].innerHTML)*1000;
   let quanity = parseFloat(document.getElementsByClassName("input-quanity")[0].value);
   let priceSum = price*quanity;
 
-  const baseUrl = "http://localhost:8080/api/payment";
+  const baseUrl = "http://localhost:8086/api/payment";
   const params = {
     amount: priceSum.toString(),
   };

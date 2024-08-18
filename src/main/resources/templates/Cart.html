@@ -6,38 +6,78 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="Component/CSS/Header.css">
+    <link rel="stylesheet" href="Home/CSS/Body_index.css">
     <link rel="stylesheet" href="Cart/CSS/Body_cart.css">
-    <link rel="stylesheet" href="Component/CSS/Footer.css">
+
 </head>
 
-<body>
-<div class="main">
-    <div class="space"></div>
+<body >
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="wrapper flexitem">
+                <div class="left">
+                    <a aria-current="page" href="/" class="logo">Bright Clothes</a>
+                </div>
+                <div class="middle">
+                    <nav class="navbar">
+                        <a href="/search?category=%C3%A1o&gender=Nam">Áo Nam</a>
+                        <a href="/search?category=qu%E1%BA%A7n&gender=Nam">Quần Nam</a>
+                        <a href="/search?category=%C3%A1o&gender=N%E1%BB%AF">Áo Nữ</a>
+                        <a href="/search?category=qu%E1%BA%A7n&gender=N%E1%BB%AF">Quần Nữ</a>
+                    </nav>
+                    <li class="nav-item type">
+                        <a class="nav-link" href="/Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <div class="icons">
+                        <a href="#" class="icon"><i class="ri-shopping-cart-line"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <nav class="navbar">
+                        <a href="#">Login</a>
+                        <a href="#">Logout</a>
+                    </nav>
 
-    <div class="header-row">
-        <div class="header-check">
-            <input type="checkbox" onclick="handleHeaderCheckbox()">
-        </div>
-        <div class="header-product">
-            Sản phẩm
-        </div>
-        <div class="header-style">
-            Phân loại
-        </div>
-        <div class="header-pirce_each_product">
-            Đơn giá
-        </div>
-        <div class="header-quanity">
-            Số lượng
-        </div>
-        <div class="header-pirce_sum">
-            Số tiền
-        </div>
-        <div class="header-operate">
-            Thao tác
+                </div>
+            </div>
         </div>
     </div>
+    <div class="search-bar">
+        <div class="container" role="search">
+            <input type="search" placeholder="Find your product " aria-label="Search">
+            <button class="btn btn-outline-success" onclick="findProductByKeywords(this, event)">Search</button>
+        </div>
+    </div>
+</header>
+<div class="main cart">
+    <div class="wrapper-list">
+        <div class="space"></div>
+
+        <div class="header-row">
+            <div class="header-check">
+                <input type="checkbox" onclick="handleHeaderCheckbox()">
+            </div>
+            <div class="header-product">
+                Sản phẩm
+            </div>
+            <div class="header-style">
+                Phân loại
+            </div>
+            <div class="header-pirce_each_product">
+                Đơn giá
+            </div>
+            <div class="header-quanity">
+                Số lượng
+            </div>
+            <div class="header-pirce_sum">
+                Số tiền
+            </div>
+            <div class="header-operate">
+                Thao tác
+            </div>
+        </div>
+
 
 <div id="list-group-item">
 <!--    <div class="group-item-row">-->
@@ -119,60 +159,38 @@
     <div class="space"></div>
 </div>
 
-<header>
-    <div>
-        <a class="nav-link authentication" href="#">Đăng kí</a>
-        <a class="nav-link authentication" href="#">Đăng nhập</a>
-        <div style="clear: both;"></div>
-    </div>
 
-    <ul id="main" class="nav">
-        <li class="nav-item">
-            <a class="nav-link brand-name" aria-current="page" href="/">CLOTHES</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/search?category=%C3%A1o&gender=Nam">Áo nam</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/search?category=qu%E1%BA%A7n&gender=Nam">Quần nam</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/search?category=%C3%A1o&gender=N%E1%BB%AF">Áo nữ</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/search?category=qu%E1%BA%A7n&gender=N%E1%BB%AF">Quần nữ</a>
-        </li>
-        <li class="nav-item type">
-            <a class="nav-link" href="/Cart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-    </ul>
-    <div class="container-fluid">
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Tìm kiếm</button>
-        </form>
-    </div>
-    <div style="clear: both; height: 0"></div>
-</header>
-
-<footer>
-    Công ty TNHH CLOTHES
-    <br>
-    Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.clothes.vn
-    <br>
-    Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Bùi Anh Tuấn
-    <br>
-    Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
-    <br>
-    © 2015 - Bản quyền thuộc về Công ty TNHH CLOTHES
-</footer>
 
 <script src="Cart/JS/Click_cart.js"></script>
 <script src="Cart/JS/Caculate.js"></script>
 <script src="Cart/JS/Convert_cart.js"></script>
 <script src="Cart/JS/Input.js"></script>
 <script src="Cart/JS/CRUD_cart.js"></script>
-
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Company Information</h3>
+            <p>CLOTHES Co., Ltd</p>
+            <p>Address: Floors 4-5-6, Capital Place Building, No. 29 Lieu Giai Street, Ngoc Khanh Ward, Ba Dinh District, Hanoi, Vietnam.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+            <p>Hotline: 19001221</p>
+            <p>Email: cskh@hotro.clothes.vn</p>
+        </div>
+        <div class="footer-column">
+            <h3>Content Manager</h3>
+            <p>Responsible for Content Management: Nguyen Bui Anh Tuan</p>
+        </div>
+        <div class="footer-column">
+            <h3>Business Information</h3>
+            <p>Business Registration Number: 0106773786</p>
+            <p>Issued by Hanoi Department of Planning & Investment on 10/02/2015</p>
+            <p>© 2015 - Copyright belongs to CLOTHES Co., Ltd</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
 
